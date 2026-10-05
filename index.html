@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>ManyTabs — Open links together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="ManyTabs home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>manytabs</a>
+      <span class="local-note"><span class="local-dot"></span> Runs right in your browser</span>
+    </header>
+
+    <section class="hero" aria-labelledby="title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR LITTLE TAB LAUNCHER</div>
+      <h1 id="title">A bunch of links.<br><span>One click.</span></h1>
+      <p class="intro">Drop in the links you need and open them all at once.<br class="desktop-break"> No accounts, no fuss — just a fresh set of tabs.</p>
+
+      <section class="composer" aria-label="Links to open">
+        <div class="composer-head">
+          <label for="links">YOUR LINKS <span class="label-hint">one per line, or separated by commas</span></label>
+          <button type="button" class="clear-button" id="clearButton" hidden>Clear all <span aria-hidden="true">×</span></button>
+        </div>
+        <div class="input-wrap">
+          <div class="line-decoration" aria-hidden="true"><span>↳</span></div>
+          <textarea id="links" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="https://notion.so/my-work&#10;https://github.com&#10;https://calendar.google.com" aria-describedby="inputHelp"></textarea>
+        </div>
+        <div class="composer-foot">
+          <span id="inputHelp"><span class="kbd">↵</span> Paste your links here</span>
+          <span id="linkCount" class="count">0 LINKS</span>
+        </div>
+        <button class="open-button" id="openButton" type="button" disabled>
+          <span class="open-icon" aria-hidden="true">↗</span>
+          <span id="buttonLabel">Open all links</span>
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="fine-print"><span class="lock-icon" aria-hidden="true">⌑</span> Links stay on your device. Nothing is saved or sent.</div>
+    </section>
+
+    <footer><span>MADE FOR YOUR NEXT DEEP-DIVE</span><span class="footer-spark" aria-hidden="true">✳</span><span>LESS CLICKING, MORE DOING</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
